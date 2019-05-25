@@ -1,0 +1,49 @@
+
+# GraphQL Query Language Schema examples from: https://www.prisma.io/blog/graphql-sdl-schema-definition-language-6755bcb9ce51
+
+#     type Post {
+
+#         id: String!
+#         title: String!
+#         publishedAt: DateTime!
+#         likes: Int! @default( value: 0 )
+#         blog: Blog @relation( name: "Posts" )
+#     }
+
+#     type Blog {
+
+#         id: String!
+#         name: String!
+#         description: String
+#         posts: [Post!]! @relation( name: "Posts" )
+#     }
+
+
+# In general, when adding a new feature to the API, the process will look pretty similar every time:
+
+#     1. Extend the GraphQL schema definition with a new root field (and new data types, if needed)
+#     2. Implement corresponding resolver functions for the added fields
+
+# This process is also referred to as schema-driven or schema-first development.
+
+
+type Query {
+
+    info: String!
+    feed: [ Link! ]!
+    link( id: ID! ): Link
+}
+
+type Mutation {
+
+    post( url: String!, description: String! ): Link!
+    updateLink( id: ID!, url: String, description: String ): Link
+    deleteLink( id: ID! ): Link
+}
+
+type Link {
+
+    id: ID!
+    description: String!
+    url: String!
+}

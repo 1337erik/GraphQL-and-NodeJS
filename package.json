@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@playlyfe/gql": "^2.6.1",
     "graphql-yoga": "^1.17.4"
   }
 }
