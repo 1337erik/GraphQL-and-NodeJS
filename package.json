@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@playlyfe/gql": "^2.6.1",
+    "bcryptjs": "^2.4.3",
     "graphql-yoga": "^1.17.4",
+    "jsonwebtoken": "^8.5.1",
     "prisma-client-lib": "^1.33.0"
   }
 }
