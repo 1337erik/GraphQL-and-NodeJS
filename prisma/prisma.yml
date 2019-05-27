@@ -1,0 +1,15 @@
+# Documentation for Prisma YamL config
+# https://www.prisma.io/docs/1.33/prisma-cli-and-configuration/prisma-yml-5cy7/
+
+
+
+# HTTP endpoint for the Prisma API
+endpoint: https://us1.prisma.sh/erik-white-73aeeb/hackernews-node/dev
+
+# Points to the file that contains your datamodel
+datamodel: datamodel.prisma
+
+# Specifies language & location for the generated Prisma client
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
